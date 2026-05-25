@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K8s Todo App - Azure</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background: #f4f7f9;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🚀 Kubernetes Todo App on Azure AKS</h1>
+    <p><strong>Backend:</strong> Python Flask + PostgreSQL</p>
+
+    <input type="text" id="task" placeholder="Enter new task..." />
+    <button onclick="addTodo()">Add Todo</button>
+
+    <h2>My Todos</h2>
+    <ul id="todoList"></ul>
+
+    <script>
+        const API_URL = '';  // Leave empty - it will use current domain
+
+        async function loadTodos() {
+            const res = await fetch('/todos');
+            const todos = await res.json();
+            const list = document.getElementById('todoList');
+            list.innerHTML = '';
+            todos.forEach(t => {
+                list.innerHTML += `<li>✅ ${t.task}</li>`;
+            });
+        }
+
+        async function addTodo() {
+            const task = document.getElementById('task').value;
+            if (!task) return;
+
+            await fetch('/todos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ task: task })
+            });
+            document.getElementById('task').value = '';
+            loadTodos();
+        }
+
+        // Load todos when page opens
+        loadTodos();
+    </script>
+</body>
+
+</html>
