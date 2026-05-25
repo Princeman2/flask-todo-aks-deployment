@@ -1,28 +1,30 @@
 # 🚀 Flask Todo App on Azure Kubernetes Service (AKS)
 
-A full-stack **Todo Application** deployed on **Azure Kubernetes Service (AKS)** using Python Flask and PostgreSQL.
+A full-stack **Todo Application** successfully deployed on **Azure Kubernetes Service (AKS)**.
 
-## ✨ Live Demo
+## ✨ Live Application
 **URL:** http://20.164.108.179
+
+![Web Interface](web-interface.png)
 
 ## 🛠️ Tech Stack
 
 - **Backend**: Python + Flask
 - **Database**: PostgreSQL
 - **Containerization**: Docker
-- **Orchestration**: Kubernetes
-- **Cloud**: Microsoft Azure AKS
+- **Orchestration**: Kubernetes (AKS)
+- **Cloud**: Microsoft Azure
 
 ## 📸 Screenshots
 
-![Web Application](screenshots/web-interface.png)
-*Clean Todo Web Interface*
+![Todo Web App](Screenshot 2026-05-25 171618)  
+*Clean and functional Todo List Interface*
 
-![Kubernetes Pods](screenshots/kubectl-get-all.png)
-*Running Pods on AKS*
+![Kubernetes Resources](Screenshot 2026-05-25 171239)  
+*Pods, Deployments and Services running on AKS*
 
-![Azure Cluster](screenshots/azure-aks.png)
-*Azure Kubernetes Service Cluster*
+![Azure AKS Cluster](Screenshot 2026-05-25 171118)  
+*Azure Kubernetes Service Cluster Overview*
 
 ## 📁 Project Structure
 
@@ -41,27 +43,24 @@ flask-todo-aks/
 └── README.md
 
 
- Features Demonstrated
+ Key Concepts Demonstrated
 
 Multi-tier architecture (Backend + Database)
-
 Docker containerization
-
-Kubernetes Deployments, Services, and LoadBalancer
-
-Persistent storage with PostgreSQL
-
-Deployed on real cloud (Azure AKS)
+Kubernetes Deployments & Services (LoadBalancer)
+Environment variables and configuration
+Deploying real applications on Azure cloud
 
 
+What I Learned
 
- What I Learned
-
-Deploying stateful applications on Kubernetes
-
+How to deploy stateful applications (PostgreSQL) on Kubernetes
 Connecting services using DNS names
+Troubleshooting common issues (CrashLoopBackOff, image pulling, etc.)
+Managing cloud resources on Azure AKS
 
-Troubleshooting common issues (CrashLoopBackOff, image pulling, templates)
 
-Managing resources on Azure AKS
+
+
+
 
