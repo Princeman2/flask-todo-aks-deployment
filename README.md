@@ -17,13 +17,13 @@ A full-stack **Todo Application** successfully deployed on **Azure Kubernetes Se
 
 ## 📸 Screenshots
 
-![Todo Web App](Screenshot 2026-05-25 171618)  
+![Todo Web App](web-interface.png)  
 *Clean and functional Todo List Interface*
 
-![Kubernetes Resources](Screenshot 2026-05-25 171239)  
+![Kubernetes Resources](kubectl-get-all.png)  
 *Pods, Deployments and Services running on AKS*
 
-![Azure AKS Cluster](Screenshot 2026-05-25 171118)  
+![Azure AKS Cluster](azure-aks.png)  
 *Azure Kubernetes Service Cluster Overview*
 
 ## 📁 Project Structure
@@ -43,7 +43,7 @@ flask-todo-aks/
 └── README.md
 
 
- Key Concepts Demonstrated
+##🚀 Key Concepts Demonstrated
 
 Multi-tier architecture (Backend + Database)
 Docker containerization
@@ -52,7 +52,7 @@ Environment variables and configuration
 Deploying real applications on Azure cloud
 
 
-What I Learned
+## What I Learned
 
 How to deploy stateful applications (PostgreSQL) on Kubernetes
 Connecting services using DNS names
