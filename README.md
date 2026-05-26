@@ -43,7 +43,7 @@ flask-todo-aks/
 └── README.md
 
 
-##🚀 Key Concepts Demonstrated
+ Key Concepts Demonstrated
 
 Multi-tier architecture (Backend + Database)
 Docker containerization
@@ -52,7 +52,7 @@ Environment variables and configuration
 Deploying real applications on Azure cloud
 
 
-## What I Learned
+ What I Learned
 
 How to deploy stateful applications (PostgreSQL) on Kubernetes
 Connecting services using DNS names
