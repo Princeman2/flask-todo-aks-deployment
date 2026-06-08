@@ -76,7 +76,7 @@ HTML = """
 
 @app.route('/')
 def home():
-    return HTML
+    return "<h1>🚀 CI/CD Pipeline Working! Flask App v4 - Updated via Github Actions</h1>", 200
 
 @app.route('/todos', methods=['GET'])
 def get_todos():
