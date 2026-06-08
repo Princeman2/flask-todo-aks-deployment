@@ -45,5 +45,7 @@ jobs:
 
     - name: Deploy to Kubernetes
       run: |
+        # Apply in correct order
+        kubectl apply -f k8s/namespace.yaml
         kubectl apply -f k8s/
-        kubectl rollout restart deployment/flask-app -n todo-app
+        kubectl rollout restart deployment/flask-app -n todo-app --request-timeout=2m
